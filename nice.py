@@ -17,10 +17,49 @@ def start_here():
         </head>
         <body>
             <a href='/hello'>Hi! This is the home page.</a>
+            <a href='/practice'>Link to HTML practice</a>
         </body>
     </html>
     """
 # route to display a simple web page
+@app.route("/practice")
+def practice():
+    return """
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>HTML practice</title>
+        </head>
+        <body>
+            <p>This is practice!</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Favorite Food</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jane</td>
+                        <td>Pizza</td>
+                    </tr>
+                    <tr>
+                        <td>Emily</td>
+                        <td>Ice cream</td>
+                    </tr>
+                    <tr>
+                        <td>Theresa</td>
+                        <td>Cookies</td>
+                    </tr>
+                </tbody>
+            </table>
+        </body>
+
+    </html>
+    """
+
+
 @app.route('/hello')
 def say_hello():
     return """
